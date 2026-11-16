@@ -5,11 +5,27 @@ Public playground for the **headless** Angular adapter. Mounts `<videocrypt-play
 | | |
 |--|--|
 | Port | **4200** |
+| Sample version | **1.2.0** |
 | Repo | [videocryptplayer-sample-angular](https://github.com/codenannu/videocryptplayer-sample-angular) |
-| SDK | `@codenkay/video-videocrypt-angular` · `core` (**0.1.0**) |
+| SDK | `@codenkay/video-videocrypt-angular` · `core` (**^1.2.0**) |
 | Modes | **DRM auto** via Next BFF **:3001** · **clear** (`drmMode="none"`) |
 
+## Runtime stack
+
+| Layer | Version |
+|-------|---------|
+| Node.js | **>=20.9.0** |
+| Angular | **19.2.25** (v19 LTS) |
+| TypeScript | ~5.8.3 |
+| zone.js | ~0.15.1 |
+| Video.js | ^7.21.5 |
+| SDK | `@codenkay/video-videocrypt-angular@^1.2.0` (+ core) |
+
 > This sample is **standalone**. It does **not** require cloning a private SDK monorepo. Prefer **npm** packages. Full seek/quality chrome ships for React (`@codenkay/video-videocrypt-ui`) — not in this package.
+
+## Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md).
 
 ## SDK packages
 
@@ -37,20 +53,20 @@ npm install
 npm start
 ```
 
-Open http://localhost:4200
+Requires Node.js **>=20.9.0**. Open http://localhost:4200
 
 ## BFF mode
 
 1. Run [videocryptplayer-sample-nextjs](https://github.com/codenannu/videocryptplayer-sample-nextjs) on port **3001**.
 2. Select **DRM auto** and click Play.
 
-No secrets in this Angular app — tokens stay on the Next BFF. Allow this SPA in BFF CORS.
+No secrets in this Angular app — tokens stay on the Next BFF. This origin (`http://localhost:4200`) is allowlisted in the Next sample CORS helper.
 
 ## Install peers (into your own app)
 
 ```bash
-npm install @codenkay/video-videocrypt-angular @codenkay/video-videocrypt-core video.js@^7.21.5 videojs-contrib-eme@^3.11.1
-# Angular 17+ and rxjs ^7 as peers
+npm install @codenkay/video-videocrypt-angular@^1.2.0 @codenkay/video-videocrypt-core@^1.2.0 video.js@^7.21.5 videojs-contrib-eme@^3.11.1
+# Angular 17+ (sample uses 19.2 LTS) and rxjs ^7 as peers
 ```
 
 ```html

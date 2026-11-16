@@ -1,28 +1,45 @@
 {
   "name": "videocryptplayer-angular",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.2.0",
+  "description": "Videocrypt Player sample — Angular 19.2 LTS headless + host chrome",
+  "homepage": "https://github.com/codenannu/videocryptplayer-sample-angular#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codenannu/videocryptplayer-sample-angular.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codenannu/videocryptplayer-sample-angular/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
-    "start": "ng serve --port 4200",
-    "build": "ng build"
+    "ng": "ng",
+    "start": "ng serve --port 4200 --host 0.0.0.0",
+    "dev": "npm start",
+    "build": "ng build",
+    "typecheck": "ng build --configuration development"
   },
   "dependencies": {
-    "@angular/common": "^19.2.0",
-    "@angular/compiler": "^19.2.0",
-    "@angular/core": "^19.2.0",
-    "@angular/platform-browser": "^19.2.0",
-    "@angular/platform-browser-dynamic": "^19.2.0",
-    "@codenkay/video-videocrypt-angular": "file:../videocrypt-player/packages/angular",
-    "@codenkay/video-videocrypt-core": "file:../videocrypt-player/packages/core",
+    "@angular/common": "19.2.25",
+    "@angular/compiler": "19.2.25",
+    "@angular/core": "19.2.25",
+    "@angular/platform-browser": "19.2.25",
+    "@angular/platform-browser-dynamic": "19.2.25",
+    "@codenkay/video-videocrypt-angular": "^1.2.0",
+    "@codenkay/video-videocrypt-core": "^1.2.0",
     "rxjs": "^7.8.0",
     "tslib": "^2.8.0",
     "video.js": "^7.21.5",
     "videojs-contrib-eme": "^3.11.1",
-    "zone.js": "^0.15.0"
+    "zone.js": "~0.15.1"
   },
   "devDependencies": {
-    "@angular/cli": "^19.2.0",
-    "@angular/compiler-cli": "^19.2.0",
-    "typescript": "~5.7.2"
+    "@angular-devkit/build-angular": "19.2.27",
+    "@angular/cli": "19.2.27",
+    "@angular/compiler-cli": "19.2.25",
+    "typescript": "~5.8.3"
   }
 }
